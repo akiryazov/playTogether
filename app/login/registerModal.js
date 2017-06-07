@@ -2,14 +2,15 @@
 
 angular
     .module('playTogether')
-    .controller('RegisterModalCtrl', function ($uibModalInstance) {
+    .controller('RegisterModalCtrl', ['$uibModalInstance', '$rootScope', function ($uibModalInstance, $rootScope) {
 
         var $ctrl = this;
 
-        $ctrl.ok = function () {
+        $rootScope.confirmRegistration = function () {
+            alert('kk');
         };
 
-        $ctrl.cancel = function () {
+        $rootScope.cancelRegistration = function () {
             $uibModalInstance.dismiss('cancel');
         };
-    });
+    }]);

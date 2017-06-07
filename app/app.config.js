@@ -13,11 +13,8 @@
         size: 'md',
         backdrop: 'static',
       });
-      modalInstance.result.then(function (response) {
-        console.log("Modal closed " + response)
-      }, function (response) {
-        // toastr.clear();
-        console.log("Modal closed " + response);
-      })
     }
  }]);
+
+
+ 

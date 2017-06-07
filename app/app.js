@@ -20,12 +20,6 @@
           controller: 'View1Ctrl'
         })
         .state({
-          name: 'registerModal',
-          url: '/registerModal',
-          templateUrl: 'login/registerModal.html',
-          controller: 'RegisterModalCtrl'
-        })
-        .state({
           name: 'view2',
           url: '/view2/view2',
           templateUrl: 'view2/view2.html',
