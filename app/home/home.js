@@ -2,6 +2,6 @@
 
 angular.module('playTogether')
 
-  .controller('LoginCtrl', [ function () {
+  .controller('HomeCtrl', [ function () {
     var $scope = this;
   }]);
