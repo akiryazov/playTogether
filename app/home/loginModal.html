@@ -1,0 +1,29 @@
+<div class="modal-header">
+    <h3 class="modal-title" id="modal-title">Вход в системата</h3>
+</div>
+<div class="modal-body" id="modal-body">
+    <form name="loginForm" class="login-validation">
+        <div class="modal-group">
+            <div class="row" style="text-align: center">
+                Потребителско име:
+            </div>
+            <div class="col-md-12">
+                <div class="row usernameLoginForm col-md-2 col-md-offset-3">
+                    <input type="text" name="username" class="form-control" ng-model="$rootScope.loginForm.username">
+                </div>
+            </div>
+        </div>
+        <div class="modal-group">
+            <div class="row" style="text-align: center">
+                Парола:
+            </div>
+            <div class="row passwordLoginForm" style="text-align: center">
+                <textarea name="password" class="form-control" ng-model="$rootScope.loginForm.password" rows="1"></textarea>
+            </div>
+        </div>
+    </form>
+</div>
+<div class="modal-footer">
+    <button class="btn btn-primary" type="button" ng-click="confirmLogin()">Вход</button>
+    <button class="btn btn-warning" type="button" ng-click="cancelLogin()">Отказ</button>
+</div>
