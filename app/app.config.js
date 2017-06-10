@@ -8,7 +8,7 @@
         animation: true,
         ariaLabelledBy: 'modal-title',
         ariaDescribedBy: 'modal-body',
-        templateUrl: 'login/registerModal.html',
+        templateUrl: 'home/registerModal.html',
         controller: 'RegisterModalCtrl',
         size: 'md',
         backdrop: 'static',
@@ -16,5 +16,20 @@
     }
  }]);
 
+// angular
+//     .module('playTogether')
+//     .controller('RegisterModalCtrl', ['$uibModalInstance', '$rootScope', function ($uibModalInstance, $rootScope) {
+
+//         $rootScope.registrationForm = {username: "", password: ""};
+
+//         $rootScope.confirmRegistration = function () {
+//             alert('kk');
+//             console.log($rootScope.registrationForm.username);
+//         };
+
+//         $rootScope.cancelRegistration = function () {
+//             $uibModalInstance.dismiss('cancel');
+//         };
+//     }]);
 
  

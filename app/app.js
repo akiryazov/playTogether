@@ -3,15 +3,27 @@
 
   // Declare app level module which depends on views, and app/components
   angular
-    .module('playTogether', ['ui.router', 'ui.bootstrap'])
+    .module('playTogether', ['ui.router', 'ui.bootstrap', 'ngAnimate', 'toastr'])
     .config(function ($stateProvider, $urlRouterProvider) {
       $stateProvider
+        .state({
+          name: 'home',
+          url: '/home',
+          templateUrl: 'home/home.html',
+          controller: 'HomeCtrl',
+          controllerAs: '$scope'
+        })
+        .state({
+          name: 'registration',
+          url: '/registration',
+          templateUrl: 'registration/registration.html',
+          controller: 'RegistrationCtrl'
+        })
         .state({
           name: 'login',
           url: '/login',
           templateUrl: 'login/login.html',
-          controller: 'LoginCtrl',
-          controllerAs: '$scope'
+          controller: 'LoginCtrl'
         })
         .state({
           name: 'view1',
@@ -27,6 +39,6 @@
         });
 
 
-      $urlRouterProvider.otherwise('/login');
+      $urlRouterProvider.otherwise('/home');
     });
 })();

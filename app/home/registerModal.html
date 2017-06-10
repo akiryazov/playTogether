@@ -1,0 +1,29 @@
+<div class="modal-header">
+    <h3 class="modal-title" id="modal-title">Register</h3>
+</div>
+<div class="modal-body" id="modal-body">
+    <form name="registrationForm" class="form-validation">
+        <div class="modal-group">
+            <div class="row" style="text-align: center">
+                Username:
+            </div>
+            <div class="col-md-12">
+                <div class="row usernameRegistrationForm col-md-2 col-md-offset-3">
+                    <input type="text" name="username" class="form-control" ng-model="$rootScope.registrationForm.username">
+                </div>
+            </div>
+        </div>
+        <div class="modal-group">
+            <div class="row" style="text-align: center">
+                Password:
+            </div>
+            <div class="row passwordRegistrationForm" style="text-align: center">
+                <textarea name="password" class="form-control" ng-model="$rootScope.registrationForm.password" rows="1"></textarea>
+            </div>
+        </div>
+    </form>
+</div>
+<div class="modal-footer">
+    <button class="btn btn-primary" type="button" ng-click="confirmRegistration()">Register</button>
+    <button class="btn btn-warning" type="button" ng-click="cancelRegistration()">Cancel</button>
+</div>

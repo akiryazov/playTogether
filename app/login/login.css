@@ -38,14 +38,26 @@ p {
   margin: 0 auto;
   padding-bottom: 32px;
 }
-.loginPageLine {
-    width: 85%;
-}
-.socialNetworkButtons {
-    text-align: center;
-    padding-top: 220px;
-}
 .footerText {
     text-align: center;
     color: white !important;
+}
+.usernameLoginForm {
+  width: 50%;
+  text-align: center;
+  padding-top: 5px;
+}
+.passwordLoginForm {
+  width: 50%;
+  text-align: center;
+  margin-bottom: 5px;
+  padding-top: 5px;
+}
+
+.passwordLabel {
+    padding-top: 50px;
+}
+
+.modal-footer {
+    border-top: none;
 }
