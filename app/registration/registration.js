@@ -9,29 +9,29 @@ angular
         $scope.confirmRegistration = function () {
             var errorMessage = "";
             if ($scope.registrationForm.username == null) {
-                errorMessage += "Username field is required. ";
+                errorMessage += "Не сте въвели потребителско име. ";
             }
             else if ($scope.registrationForm.username.length < 8) {
-                errorMessage += "Username should be 8 symbols or more. ";
+                errorMessage += "Потребителското име не може да е по-късо от 8 символа. ";
             }
             if ($scope.registrationForm.password == null) {
-                errorMessage += "Password field is required. ";
+                errorMessage += "Не сте въвели парола.";
             }
             else {
                 if ($scope.registrationForm.password.length < 8) {
-                    errorMessage += "Password should be 8 symbols or more. "
+                    errorMessage += "Паролата не може да е по-къса от 8 символа."
                 }
                 else if ($scope.registrationForm.confirmedPassword === null || $scope.registrationForm.password != $scope.registrationForm.confirmedPassword) {
-                    errorMessage += "Passwords do not match. ";
+                    errorMessage += "Паролите не съвпадат. ";
                 }
             }
 
             if (errorMessage == "") {
-                toastr.success('Registration Successfull!', 'Success');
+                toastr.success('Успешна регистрация!', '');
                 // $state.go('');
             }
             else {
-                toastr.error(errorMessage, 'Error');
+                toastr.error(errorMessage, 'Грешка');
             }
 
 

@@ -4,29 +4,29 @@ angular
     .module('playTogether')
     .controller('LoginCtrl', ['$scope','$state', 'toastr', function ($scope, $state, toastr) {
 
-        $scope.login = { username: null, password: null};
+        $scope.loginForm = { username: null, password: null};
 
         $scope.confirmLogin = function () {
             var errorMessage = "";
             if ($scope.loginForm.username == null) {
-                errorMessage += "Username field is required. ";
+                errorMessage += "Не сте въвели потребителско име. ";
             }
             else if ($scope.loginForm.username.length < 8) {
-                errorMessage += "Username should be 8 symbols or more. ";
+                errorMessage += "Потребителското име не може да е по-късо от 8 символа. ";
             }
             if ($scope.loginForm.password == null) {
-                errorMessage += "Password field is required. ";
+                errorMessage += "Не сте въвели парола. ";
             }
             else if ($scope.loginForm.password.length < 8) {
-                    errorMessage += "Password should be 8 symbols or more. "
+                    errorMessage += "Паролата не може да е по-къса от 8 символа. "
             }
 
             if (errorMessage == "") {
-                toastr.success('Login Successfull!', 'Success');
+                toastr.success('Успешно влизане в системата!', '');
                 // $state.go('');
             }
             else {
-                toastr.error(errorMessage, 'Error');
+                toastr.error(errorMessage, 'Грешка');
             }
 
 
