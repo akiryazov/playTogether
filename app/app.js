@@ -20,6 +20,12 @@
           controller: 'RegistrationCtrl'
         })
         .state({
+          name: 'login',
+          url: '/login',
+          templateUrl: 'login/login.html',
+          controller: 'LoginCtrl'
+        })
+        .state({
           name: 'view1',
           url: '/view1',
           templateUrl: 'view1/view1.html',
