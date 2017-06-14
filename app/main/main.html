@@ -30,13 +30,21 @@
         </div>
     </nav>
     <div class="main" ng-controller="MainCtrl">
-        <h2> Събития </h2>
-        <uib-accordion close-others="oneAtATime">
-            <div ng-repeat="event in events">
-                <div uib-accordion-group class="panel-default" is-open="status.open">
-                    <uib-accordion-heading>
-                        {{event.sportType}}
-                    </uib-accordion-heading>
+        <div class="row">
+            <h2 style="margin-left: 28px"> Събития </h2>
+        </div>
+        <div class="row col-md-12">
+            <div class="col-md-offset-8 col-md-4 selectFilter" style="float:right">
+                <select>
+            <option value="sport">Спорт</option>
+            <option value="dateAndTime"> Дата и час </option>
+            <option value="location"> Локация </option>
+                </select>
+            </div>
+        </div>
+        <div class="col-md-12">
+            <uib-accordion class="col-md-7" close-others="oneAtATime">
+                <div uib-accordion-group class="panel-default" heading="{{event.sportType}}" ng-repeat="event in events">
                     <div class="row whenAndWhereInfo">
                         <span class="glyphicon glyphicon-calendar col-md-4" aria-hidden="true">
                         {{event.dateAndTime}}</span>
@@ -51,77 +59,11 @@
                         <span class="glyphicon glyphicon-thumbs-up col-md-12" aria-hidden="true">
                     {{event.peopleGoing}}</span>
                     </div>
-
-                    <!--<uib-accordion-heading>
-                    Футбол<i class="pull-right glyphicon" ng-class="{'glyphicon-chevron-down': status.open, 'glyphicon-chevron-right': !status.open}"></i>
-                </uib-accordion-heading>
-                <div class="row whenAndWhereInfo">
-                    <span class="glyphicon glyphicon-calendar col-md-4" aria-hidden="true">
-                        20:00-21:00 25/04/2017</span>
-                    <span class="glyphicon glyphicon-map-marker col-md-8" aria-hidden="true">
-                        ж.к. Дружба, бул. "Цветан Лазаров" 1581, София</span>
+                    <div class="row">
+                        <button class="btn" style="float:right"> Към събитието </button>
+                    </div>
                 </div>
-                <div class="row whoInfo">
-                    <span class="glyphicon glyphicon-user col-md-12" aria-hidden="true">
-                    Ангел Кирязов</span>
-                </div>
-                <div class="row howManyInfo">
-                    <span class="glyphicon glyphicon-thumbs-up col-md-12" aria-hidden="true">
-                    9/12</span>
-                </div>
-                <uib-accordion-heading>
-                    Тенис<i class="pull-right glyphicon" ng-class="{'glyphicon-chevron-down': status.open, 'glyphicon-chevron-right': !status.open}"></i>
-                </uib-accordion-heading>
-                <div class="row whenAndWhereInfo">
-                    <span class="glyphicon glyphicon-calendar col-md-4" aria-hidden="true">
-                        16:00-18:00 13/05/2017</span>
-                    <span class="glyphicon glyphicon-map-marker col-md-8" aria-hidden="true">
-                        ж.к. Люлин, ул. "Филиповско шосе" 38 1581, София</span>
-                </div>
-                <div class="row whoInfo">
-                    <span class="glyphicon glyphicon-user col-md-12" aria-hidden="true">
-                    Димитър Петров</span>
-                </div>
-                <div class="row howManyInfo">
-                    <span class="glyphicon glyphicon-thumbs-up col-md-12" aria-hidden="true">
-                    1/2</span>
-                </div>
-                <uib-accordion-heading>
-                    Баскетбол<i class="pull-right glyphicon" ng-class="{'glyphicon-chevron-down': status.open, 'glyphicon-chevron-right': !status.open}"></i>
-                </uib-accordion-heading>
-                <div class="row whenAndWhereInfo">
-                    <span class="glyphicon glyphicon-calendar col-md-4" aria-hidden="true">
-                        18:00-19:30 05/05/2017</span>
-                    <span class="glyphicon glyphicon-map-marker col-md-8" aria-hidden="true">
-                        ж.к. Студентски град, ул. "Атанас Манчев", София</span>
-                </div>
-                <div class="row whoInfo">
-                    <span class="glyphicon glyphicon-user col-md-12" aria-hidden="true">
-                    Георги Атанасов</span>
-                </div>
-                <div class="row howManyInfo">
-                    <span class="glyphicon glyphicon-thumbs-up col-md-12" aria-hidden="true">
-                    4/6</span>
-                </div>
-                <uib-accordion-heading>
-                    Йога<i class="pull-right glyphicon" ng-class="{'glyphicon-chevron-down': status.open, 'glyphicon-chevron-right': !status.open}"></i>
-                </uib-accordion-heading>
-                <div class="row whenAndWhereInfo">
-                    <span class="glyphicon glyphicon-calendar col-md-4" aria-hidden="true">
-                        15:00-17:00 23/04/2017</span>
-                    <span class="glyphicon glyphicon-map-marker col-md-8" aria-hidden="true">
-                        Южен парк, София</span>
-                </div>
-                <div class="row whoInfo">
-                    <span class="glyphicon glyphicon-user col-md-12" aria-hidden="true">
-                    Мария Цонева</span>
-                </div>
-                <div class="row howManyInfo">
-                    <span class="glyphicon glyphicon-thumbs-up col-md-12" aria-hidden="true">
-                    9/15</span>
-                </div>-->
-                </div>
-        </uib-accordion>
+            </uib-accordion>
         </div>
-
+    </div>
 </body>
