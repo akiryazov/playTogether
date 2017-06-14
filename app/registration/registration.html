@@ -1,47 +1,52 @@
-<div class="content">
-    <div class="modal-header">
-        <h3 class="modal-title" id="modal-title">Регистрация</h3>
-    </div>
-    <div class="modal-body" id="modal-body">
-        <form name="registrationForm" class="form-validation">
-            <div class="modal-group">
-                <div class="row" style="text-align: center">
-                    Потребителско имe:
-                </div>
-                <div class="col-md-12 col-sm-12 col-xs-12">
-                    <div class="row usernameRegistrationForm col-md-2 col-sm-offset-3 col-md-2 col-sm-offset-3 col-xs-2 col-xs-offset-3">
-                        <input type="text" class="form-control usernameInput" ng-model="registrationForm.username"></input>
+<head>
+<link rel="stylesheet" type="text/css" href="registration/registration.css">
+</head>
+<body class="asdf">
+    <div class="content">
+        <div class="modal-header">
+            <h3 class="modal-title" id="modal-title">Регистрация</h3>
+        </div>
+        <div class="modal-body" id="modal-body">
+            <form name="registrationForm" class="form-validation">
+                <div class="modal-group">
+                    <div class="row" style="text-align: center">
+                        Потребителско имe:
+                    </div>
+                    <div class="col-md-12 col-sm-12 col-xs-12">
+                        <div class="row usernameRegistrationForm col-md-2 col-sm-offset-3 col-md-2 col-sm-offset-3 col-xs-2 col-xs-offset-3">
+                            <input type="text" class="form-control usernameInput" ng-model="registrationForm.username"></input>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="modal-group">
-                <div class="row passwordLabel" style="text-align: center">
-                    Парола:
-                </div>
-                <div class="col-md-12 col-sm-12 col-xs-12">
-                    <div class="row passwordRegistrationForm col-md-2 col-md-offset-3 col-sm-2 col-sm-offset-3 col-xs-2 col-xs-offset-3 ">
-                        <input type="password"  class="form-control" rows="1" ng-model="registrationForm.password"></input>
+                <div class="modal-group">
+                    <div class="row passwordLabel" style="text-align: center">
+                        Парола:
+                    </div>
+                    <div class="col-md-12 col-sm-12 col-xs-12">
+                        <div class="row passwordRegistrationForm col-md-2 col-md-offset-3 col-sm-2 col-sm-offset-3 col-xs-2 col-xs-offset-3 ">
+                            <input type="password" class="form-control" rows="1" ng-model="registrationForm.password"></input>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="modal-group">
-                <div class="row confirmPasswordLabel" style="text-align: center">
-                    Повтори паролата:
-                </div>
-                <div class="col-md-12 col-sm-12 col-xs-12">
-                    <div class="row confirmPasswordForm col-md-2 col-md-offset-3 col-sm-2 col-sm-offset-3 col-xs-2 col-xs-offset-3 ">
-                        <input type="password" class="form-control" rows="1" ng-model="registrationForm.confirmedPassword"></input>
+                <div class="modal-group">
+                    <div class="row confirmPasswordLabel" style="text-align: center">
+                        Повтори паролата:
+                    </div>
+                    <div class="col-md-12 col-sm-12 col-xs-12">
+                        <div class="row confirmPasswordForm col-md-2 col-md-offset-3 col-sm-2 col-sm-offset-3 col-xs-2 col-xs-offset-3 ">
+                            <input type="password" class="form-control" rows="1" ng-model="registrationForm.confirmedPassword"></input>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </form>
+            </form>
+        </div>
+        <div class="modal-footer">
+            <button class="btn btn-primary" type="button" ng-click="confirmRegistration()">Регистрация</button>
+        </div>
     </div>
-    <div class="modal-footer">
-        <button class="btn btn-primary" type="button" ng-click="confirmRegistration()">Регистрация</button>
+    <div class="footerText">
+        <a style="color:white; cursor: pointer;"> За нас </a>|
+        <a style="color:white;  cursor: pointer;"> FAQ </a>|
+        <a style="color:white;  cursor: pointer;"> Контакти</a> &#169; 2017 Play Together
     </div>
-</div>
-<div class="footerText">
-    <a style="color:white; cursor: pointer;"> За нас </a>|
-    <a style="color:white;  cursor: pointer;"> FAQ </a>|
-    <a style="color:white;  cursor: pointer;"> Контакти</a> &#169; 2017 Play Together
-</div>
+</body>

@@ -1,37 +1,43 @@
-<div class="content">
-    <div class="modal-header">
-        <h3 class="modal-title" id="modal-title">Вход в системата</h3>
-    </div>
-    <div class="modal-body" id="modal-body">
-        <form name="loginForm" class="form-validation">
-            <div class="modal-group">
-                <div class="row" style="text-align: center">
-                    Потребителско име:
-                </div>
-                <div class="col-md-12 col-sm-12 col-xs-12">
-                    <div class="row usernameLoginForm col-md-2 col-sm-offset-3 col-md-2 col-sm-offset-3 col-xs-2 col-xs-offset-3">
-                        <input type="text" class="form-control usernameInput" ng-model="loginForm.username"></input>
+<head>
+    <link rel="stylesheet" type="text/css" href="login/login.css">
+</head>
+
+<body>
+    <div class="content">
+        <div class="modal-header">
+            <h3 class="modal-title" id="modal-title">Вход в системата</h3>
+        </div>
+        <div class="modal-body" id="modal-body">
+            <form name="loginForm" class="form-validation">
+                <div class="modal-group">
+                    <div class="row" style="text-align: center">
+                        Потребителско име:
+                    </div>
+                    <div class="col-md-12 col-sm-12 col-xs-12">
+                        <div class="row usernameLoginForm col-md-2 col-sm-offset-3 col-md-2 col-sm-offset-3 col-xs-2 col-xs-offset-3">
+                            <input type="text" class="form-control usernameInput" ng-model="loginForm.username"></input>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="modal-group">
-                <div class="row passwordLabel" style="text-align: center">
-                    Парола:
-                </div>
-                <div class="col-md-12 col-sm-12 col-xs-12">
-                    <div class="row passwordLoginForm col-md-2 col-md-offset-3 col-sm-2 col-sm-offset-3 col-xs-2 col-xs-offset-3 ">
-                        <input type="password"  class="form-control" rows="1" ng-model="loginForm.password"></input>
+                <div class="modal-group">
+                    <div class="row passwordLabel" style="text-align: center">
+                        Парола:
+                    </div>
+                    <div class="col-md-12 col-sm-12 col-xs-12">
+                        <div class="row passwordLoginForm col-md-2 col-md-offset-3 col-sm-2 col-sm-offset-3 col-xs-2 col-xs-offset-3 ">
+                            <input type="password" class="form-control" rows="1" ng-model="loginForm.password"></input>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </form>
+            </form>
+        </div>
+        <div class="modal-footer">
+            <button class="btn btn-primary" type="button" ng-click="confirmLogin()">Вход</button>
+        </div>
     </div>
-    <div class="modal-footer">
-        <button class="btn btn-primary" type="button" ng-click="confirmLogin()">Вход</button>
+    <div class="footerText">
+        <a style="color:white; cursor: pointer;"> За нас </a>|
+        <a style="color:white;  cursor: pointer;"> FAQ </a>|
+        <a style="color:white;  cursor: pointer;"> Контакти</a> &#169; 2017 Play Together
     </div>
-</div>
-<div class="footerText">
-    <a style="color:white; cursor: pointer;"> За нас </a>|
-    <a style="color:white;  cursor: pointer;"> FAQ </a>|
-    <a style="color:white;  cursor: pointer;"> Контакти</a> &#169; 2017 Play Together
-</div>
+</body>

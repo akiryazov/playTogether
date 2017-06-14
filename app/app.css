@@ -24,14 +24,15 @@
   padding-right: 0.3em;
 }
 
-.loginPage {
+/*.loginPage {
   background: url("img/PKU0qpM.jpg") no-repeat center center fixed; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-}
+}*/
 
 .theme-showcase .navbar .container {
   width: auto;
 }
+
