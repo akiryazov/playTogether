@@ -9,7 +9,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>My AngularJS App</title>
+  <title>Play Together</title>
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
@@ -20,6 +20,7 @@
   <link rel="stylesheet" href="home/home.css">
   <link rel="stylesheet" href="registration/registration.css">
   <link rel="stylesheet" href="login/login.css">
+  <link rel="stylesheet" href="main/main.css">
   <link rel="stylesheet" href="app.css">
   <script src="bower_components/html5-boilerplate/dist/js/vendor/modernizr-2.8.3.min.js"></script>
   <script src="bower_components/jquery/dist/jquery.min.js"></script>
@@ -34,9 +35,8 @@
   <script src="app.config.js"></script>
   <script src="home/home.js"></script>
   <script src="registration/registration.js"></script>
-  <script src="home/registerModal.js"></script>
   <script src="login/login.js"></script>
-  <script src="home/loginModal.js"></script>
+  <script src="main/main.js"></script>
   <script src="view1/view1.js"></script>
   <script src="view2/view2.js"></script>
   <script src="components/version/version.js"></script>
@@ -49,7 +49,7 @@
     <li><a href="#!/view1">view1</a></li>
     <li><a href="#!/view2">view2</a></li>
   </ul>-->
-  <nav class="navbar navbar-default">
+  <nav class="navbar navbar-default" ng-show="loggedIn == false">
     <div class="container-fluid">
       <!-- Brand and toggle get grouped for better mobile display -->
       <div class="navbar-header">
@@ -60,9 +60,9 @@
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         <form class="navbar-form navbar-left">
           <div class="form-group">
-            <input type="text" class="form-control" placeholder="Search">
+            <input type="text" class="form-control" placeholder="Търсене...">
           </div>
-          <button type="submit" class="btn btn-default">Submit</button>
+          <button type="submit" class="btn btn-default">Търси</button>
         </form>
         <ul class="nav navbar-nav navbar-right">
           <li><a ui-sref="registration" style="cursor:pointer;">Регистрация</a></li>
@@ -74,7 +74,9 @@
     <!-- /.container-fluid -->
   </nav>
 
-  <div class="container theme-showcase full background-1 mask" role="main">
+
+
+  <div class="theme-showcase full background-1 mask" role="main">
     <ui-view></ui-view>
   </div>
 </body>
