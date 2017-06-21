@@ -1,0 +1,112 @@
+<head>
+    <link rel="stylesheet" type="text/css" href="createEvent/createEvent.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-inverse sidebar sideMenu" role="navigation">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-sidebar-navbar-collapse-1">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+                <a class="navbar-brand" href="#">Play Together</a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-sidebar-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li><a href="#">Дневник<span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon glyphicon-Дневник"></span></a></li>
+                    <li class="active"><a href="#">Събития<span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon glyphicon-user"></span></a></li>
+                    <li><a ui-sref="#!/createEvent">Създай събитие<span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon glyphicon-envelope"></span></a></li>
+                    <li><a href="#">Минали събития<span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon glyphicon-home"></span></a></li>
+                    <li><a href="#">Чат система<span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon glyphicon-user"></span></a></li>
+                    <li><a href="#">Контакти<span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon glyphicon-envelope"></span></a></li>
+                    <li><a href="#">Помогни на PT<span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon glyphicon-envelope"></span></a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="main" ng-controller="CreateEventCtrl">
+        <div class="col-md-12">
+            <div class="col-md-2 selectFilter">
+                <select class="form-control">
+                <option value="">Избери спорт </option> 
+                <option value="sport">Футбол</option>
+                <option value="dateAndTime">Баскетбол</option>
+                <option value="location">Волейбол</option>
+                <option value="location">Тенис</option>
+                <option value="location">Тенис на маса</option>
+                <option value="location">Бадминтон</option>
+            </select>
+            </div>
+            <div class="col-md-4" style="float:right; text-align: center;">
+                <span class="glyphicon glyphicon-user" aria-hidden="true"></span> Организатор:
+                <br>
+                <div style="margin-bottom: 10px;">
+                </div>
+                Ангел Кирязов
+            </div>
+        </div>
+        <div style="margin-bottom: 20px;">
+        </div>
+        <div class="col-md-12">
+            <div class="col-md-2 selectFilter">
+                <select class="form-control">
+                <option value="">Избери локация </option> 
+                <option value="sport">Студентски град</option>
+                <option value="dateAndTime">Раковски</option>
+                <option value="location">Лозенец</option>
+                <option value="location">Царско село</option>
+                <option value="location">Център</option>
+            </select>
+            </div>
+        </div>
+        <div class="col-md-12">
+            <div class "col-md-2">
+                <div class="title" style="padding-left:110px;">
+                    Избери дата:
+                </div>
+                <div style="display:inline-block;">
+                    <div uib-datepicker ng-model="dt" class="well well-sm" datepicker-options="options"></div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-12">
+            <div class="col-md-2">
+                <select class="form-control">
+                    <option value=""> Избери час </option>
+                    <option ng-repeat="hour in hours" value="hour">{{hour}}</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="col-md-12" style="margin-top: 15px;">
+            <div class="col-md-3">
+                <select class="form-control">
+                    <option value=""> Продължителност (в часове)</option>
+                    <option ng-repeat="durat in duration" value="durat">{{durat}}</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="col-md-12" style="margin-top: 15px;">
+            <div class="col-md-1" style=" margin-top: 50px;">
+                Коментар: 
+            </div>
+            <div class="form-group col-md-11">
+                <textarea class="form-control" rows="5" id="comment"></textarea>
+            </div>
+        </div>
+        <div class="col-md-12" style="margin-bottom: 15px;">
+            <div class="col-md-offset-11 col-md-1">
+                <button class="btn btn-primary">
+                    Създай!
+                </button>
+            </div>
+        </div>
+    </div>
+</body>
