@@ -2,7 +2,7 @@
 
 angular
     .module('playTogether')
-    .controller('MainCtrl', ['$scope', '$rootScope', function ($scope, $rootScope) {
+    .controller('MainCtrl', ['$scope', '$rootScope', '$state', function ($scope, $rootScope, $state) {
 
         // function htmlbodyHeightUpdate() {
         //     var height3 = $(window).height();
@@ -41,6 +41,10 @@ angular
             var newItemNo = $scope.items.length + 1;
             $scope.items.push('Item ' + newItemNo);
         };
+
+        $scope.goToSingleEventPage = function () {
+            $state.go('singleEvent');
+        }
 
         $scope.status = {
             isCustomHeaderOpen: false,

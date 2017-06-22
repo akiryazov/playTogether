@@ -32,6 +32,12 @@
           controller: 'MainCtrl'
         })
         .state({
+          name: 'singleEvent',
+          url: '/singleEvent',
+          templateUrl: 'singleEvent/singleEvent.html',
+          controller: 'SingleEventCtrl'
+        })
+        .state({
           name: 'view1',
           url: '/view1',
           templateUrl: 'view1/view1.html',

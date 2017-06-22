@@ -18,13 +18,13 @@
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-sidebar-navbar-collapse-1">
                 <ul class="nav navbar-nav">
-                    <li><a href="#">Дневник<span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon glyphicon-Дневник"></span></a></li>
-                    <li class="active"><a href="#">Събития<span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon glyphicon-user"></span></a></li>
-                    <li><a href="#">Създай събитие<span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon glyphicon-envelope"></span></a></li>
-                    <li><a href="#">Минали събития<span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon glyphicon-home"></span></a></li>
-                    <li><a href="#">Чат система<span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon glyphicon-user"></span></a></li>
-                    <li><a href="#">Контакти<span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon glyphicon-envelope"></span></a></li>
-                    <li><a href="#">Помогни на PT<span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon glyphicon-envelope"></span></a></li>
+                    <li><a href="#">Дневник<span style="font-size:16px;" class="pull-right hidden-xs showopacity"></span></a></li>
+                    <li class="active"><a href="#">Събития<span style="font-size:16px;" class="pull-right hidden-xs showopacity"></span></a></li>
+                    <li><a href="#">Създай събитие<span style="font-size:16px;" class="pull-right hidden-xs showopacity"></span></a></li>
+                    <li><a href="#">Минали събития<span style="font-size:16px;" class="pull-right hidden-xs showopacity"></span></a></li>
+                    <li><a href="#">Чат система<span style="font-size:16px;" class="pull-right hidden-xs showopacity"></span></a></li>
+                    <li><a href="#">Контакти<span style="font-size:16px;" class="pull-right hidden-xs showopacity"></span></a></li>
+                    <li><a href="#">Помогни на PT<span style="font-size:16px;" class="pull-right hidden-xs showopacity"></span></a></li>
                 </ul>
             </div>
         </div>
@@ -35,7 +35,7 @@
         </div>
         <div class="row col-md-12">
             <div class="col-md-offset-8 col-md-4 selectFilter" style="float:right">
-                <select>
+                <select class="form-control">
             <option value="sport">Спорт</option>
             <option value="dateAndTime"> Дата и час </option>
             <option value="location"> Локация </option>
@@ -60,7 +60,7 @@
                     {{event.peopleGoing}}</span>
                     </div>
                     <div class="row">
-                        <button class="btn" style="float:right"> Към събитието </button>
+                        <button class="btn" style="float:right" ng-click="goToSingleEventPage()"> Към събитието </button>
                     </div>
                 </div>
             </uib-accordion>
