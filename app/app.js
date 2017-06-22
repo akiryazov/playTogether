@@ -44,10 +44,10 @@
           controller: 'CreateEventCtrl'
         })
         .state({
-          name: 'view1',
-          url: '/view1',
-          templateUrl: 'view1/view1.html',
-          controller: 'View1Ctrl'
+          name: 'chat',
+          url: '/chat',
+          templateUrl: 'chat/chat.html',
+          controller: 'ChatCtrl'
         })
         .state({
           name: 'view2',
