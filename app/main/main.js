@@ -48,7 +48,7 @@ angular
 
         $scope.status = {
             isCustomHeaderOpen: false,
-            isFirstOpen: true,
+            isFirstOpen: true,  
             isFirstDisabled: false
         };
     }]);
