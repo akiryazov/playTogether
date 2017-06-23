@@ -1,5 +1,5 @@
 <head>
-    <link rel="stylesheet" type="text/css" href="main/main.css">
+    <link rel="stylesheet" type="text/css" href="pastEvents/pastEvents.css">
 </head>
 
 <body>
@@ -19,9 +19,9 @@
             <div class="collapse navbar-collapse" id="bs-sidebar-navbar-collapse-1">
                 <ul class="nav navbar-nav">
                     <li><a href="#!/profilePage">Дневник<span style="font-size:16px;" class="pull-right hidden-xs showopacity"></span></a></li>
-                    <li class="active"><a href="#!/main">Събития<span style="font-size:16px;" class="pull-right hidden-xs showopacity"></span></a></li>
+                    <li><a href="#!/main">Събития<span style="font-size:16px;" class="pull-right hidden-xs showopacity"></span></a></li>
                     <li><a href="#!/createEvent">Създай събитие<span style="font-size:16px;" class="pull-right hidden-xs showopacity"></span></a></li>
-                    <li><a href="#!/pastEvents">Минали събития<span style="font-size:16px;" class="pull-right hidden-xs showopacity"></span></a></li>
+                    <li class="active"><a href="#!/pastEvents">Минали събития<span style="font-size:16px;" class="pull-right hidden-xs showopacity"></span></a></li>
                     <li><a href="#!/chat">Чат система<span style="font-size:16px;" class="pull-right hidden-xs showopacity"></span></a></li>
                     <li><a href="#!/contacts">Контакти<span style="font-size:16px;" class="pull-right hidden-xs showopacity"></span></a></li>
                     <li><a href="#!/donationPage">Помогни на PT<span style="font-size:16px;" class="pull-right hidden-xs showopacity"></span></a></li>
@@ -29,39 +29,41 @@
             </div>
         </div>
     </nav>
-    <div class="main" ng-controller="MainCtrl">
-        <div class="row">
-            <h2 style="margin-left: 28px"> Събития </h2>
-        </div>
-        <div class="row col-md-12">
-            <div class="col-md-offset-8 col-md-4 selectFilter" style="float:right">
-                <select class="form-control">
-            <option value="">Сортирай по: </option>
-            <option value="sport">Спорт</option>
-            <option value="dateAndTime"> Дата и час </option>
-            <option value="location"> Локация </option>
-                </select>
-            </div>
+
+    <div class="main" ng-controller="PastEventsCtrl" style="padding-left: 50px;">
+        <h2> Минали събития </h2>
+        <div style="margin-bottom: 39px;">
         </div>
         <div class="col-md-12">
             <uib-accordion class="col-md-7" close-others="oneAtATime">
-                <div uib-accordion-group class="panel-default" heading="{{event.sportType}}" ng-repeat="event in events">
+                <div uib-accordion-group class="panel-default" heading="{{event.sportType}}" ng-repeat="event in pastEvents">
                     <div class="row whenAndWhereInfo">
-                        <span class="glyphicon glyphicon-calendar col-md-4" aria-hidden="true">
+                        <span class="glyphicon glyphicon-calendar col-md-5" aria-hidden="true">
                         {{event.dateAndTime}}</span>
-                        <span class="glyphicon glyphicon-map-marker col-md-8" aria-hidden="true">
+                        <span class="glyphicon glyphicon-map-marker col-md-7" aria-hidden="true">
                         {{event.location}}</span>
                     </div>
                     <div class="row whoInfo">
                         <span class="glyphicon glyphicon-user col-md-12" aria-hidden="true">
                    {{event.user}}</span>
                     </div>
-                    <div class="row howManyInfo">
-                        <span class="glyphicon glyphicon-thumbs-up col-md-12" aria-hidden="true">
-                    {{event.peopleGoing}}</span>
+                    <div class="row rateEvent">
+                        <div class="col-md-4 rateEventHeader">
+                            Оцени събитието:
+                        </div>
+                        <div id="stars-event" class="starrr col-md-6" data-rating='4'></div>
                     </div>
-                    <div class="row">
-                        <button class="btn" style="float:right" ng-click="goToSingleEventPage()"> Към събитието </button>
+                    <div class="row rateOrganisator">
+                        <div class="col-md-4 rateOrganisatorHeader">
+                            Оцени организатора:
+                        </div>
+                        <div id="stars-organisator" class="starrr col-md-6" data-rating='4'></div>
+                    </div>
+                    <div class="row ratePlayground">
+                        <div class="col-md-4 ratePlaygroundHeader">
+                            Оцени спортния обект:
+                        </div>
+                        <div id="stars-playground" class="starrr col-md-6" data-rating='4'></div>
                     </div>
                 </div>
             </uib-accordion>

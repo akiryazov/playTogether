@@ -1,0 +1,63 @@
+<head>
+    <link rel="stylesheet" type="text/css" href="main/main.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-inverse sidebar sideMenu" role="navigation">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-sidebar-navbar-collapse-1">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+                <a class="navbar-brand" href="#!/main">Play Together</a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-sidebar-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li><a href="#!/profilePage">Дневник<span style="font-size:16px;" class="pull-right hidden-xs showopacity"></span></a></li>
+                    <li><a href="#!/main">Събития<span style="font-size:16px;" class="pull-right hidden-xs showopacity"></span></a></li>
+                    <li><a href="#!/createEvent">Създай събитие<span style="font-size:16px;" class="pull-right hidden-xs showopacity"></span></a></li>
+                    <li><a href="#!/pastEvents">Минали събития<span style="font-size:16px;" class="pull-right hidden-xs showopacity"></span></a></li>
+                    <li><a href="#!/chat">Чат система<span style="font-size:16px;" class="pull-right hidden-xs showopacity"></span></a></li>
+                    <li class="active"><a href="#!/contacts">Контакти<span style="font-size:16px;" class="pull-right hidden-xs showopacity"></span></a></li>
+                    <li><a href="#!/donationPage">Помогни на PT<span style="font-size:16px;" class="pull-right hidden-xs showopacity"></span></a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="main">
+        <div class="contactsHeader">
+            <h2> Контакти </h2>
+        </div>
+        <div class="contactsInfo col-md-12">
+            PlayTogether
+            <br> бул. "Симеоновско шосе" №56, ет.3
+            <br> София, п.к 1000
+            <br> тел. : +359 886 35 15 89
+            <br> contacts@playtogether.com
+        </div>
+        <div class="contactsForm col-md-12">
+            <h2 style="text-align: center;"> Изпрати запитване </h2>
+            <div style="padding-top: 20px;">
+            </div>
+            <div class="inputs col-md-3">
+                <label for="description"> Име</label>
+                <textarea class="form-control" id="name"></textarea>
+                <label for="description"> Имейл</label>
+                <textarea class="form-control" id="email"></textarea>
+                <label for="description"> Телефонен номер</label>
+                <textarea class="form-control" id="mobilePhone"></textarea>
+            </div>
+            <div class="col-md-9">
+                <textarea class="form-control" id="message" rows="8"></textarea>
+            </div>
+            <div class="row sendButton">
+                <button class="btn" style="float: right; margin-top: 10px;"> Изпрати </button>
+            </div>
+        </div>
+    </div>
+</body>

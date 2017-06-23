@@ -50,10 +50,28 @@
           controller: 'ChatCtrl'
         })
         .state({
-          name: 'view2',
-          url: '/view2/view2',
-          templateUrl: 'view2/view2.html',
-          controller: 'View2Ctrl'
+          name: 'contacts',
+          url: '/contacts',
+          templateUrl: 'contacts/contacts.html',
+          controller: 'ContactsCtrl'
+        })
+        .state({
+          name: 'pastEvents',
+          url: '/pastEvents',
+          templateUrl: 'pastEvents/pastEvents.html',
+          controller: 'PastEventsCtrl'
+        })
+        .state({
+          name: 'donationPage',
+          url: '/donationPage',
+          templateUrl: 'donationPage/donationPage.html',
+          controller: 'DonationPageCtrl'
+        })
+        .state({
+          name: 'profilePage',
+          url: '/profilePage',
+          templateUrl: 'profilePage/profilePage.html',
+          controller: 'ProfilePageCtrl'
         });
 
 
