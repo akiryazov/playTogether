@@ -4,6 +4,11 @@
         .controller('AppCtrl', ['$scope', '$state', '$rootScope', function ($scope, $state, $rootScope) {
       
           $rootScope.loggedIn = false;
+          
+          $rootScope.logout = function () {
+              $state.go('home');
+              $rootScope.loggedIn = false;
+          }
  }]);
 
 // angular
